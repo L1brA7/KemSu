@@ -11,7 +11,7 @@ void A_output(int *A, int N); //вывод
 void A_input(int *A, int N, fstream& arr); //ввод массива из файла
 
 void A2_creator(int *A, int N); //создание массива cо случайными элементами в промежуьке от а до b
-void A2_puncher(int* A, int N);
+void A2_puncher(int* A, int N); //работа со вторым массивом
 
 int main() {
 
@@ -98,7 +98,7 @@ void A_input(int *A, int N, fstream& arr) {
         arr >> A[i];
 }
 
-void A2_creator(int *A, int N) {
+void A2_creator(int *A, int N) { 
     int a, b;
     cout << "Enter a - ";
     cin >> a;
@@ -113,7 +113,7 @@ void A2_puncher(int *A, int N) {
     arr2.open("C:/Users/Legion/Desktop/lab1_arrays_prog/lab1/lab1/array2.txt");
     int k, numplus = 0;
     cout << "Enter k to add - " << endl; cin >> k;
-    for(int i = 0; i < N; i++) {
+    for(int i = 0; i < N; i++) { 
         if(A[i] < 0) {
             arr2 << k << endl;
             numplus++;
